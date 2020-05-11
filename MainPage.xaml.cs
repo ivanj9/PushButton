@@ -80,7 +80,10 @@ namespace PushButton
 
             // Check if input pull-up resistors are supported
             if (pirPin.IsDriveModeSupported(GpioPinDriveMode.InputPullUp))
-                pirPin.SetDriveMode(GpioPinDriveMode.InputPullUp);
+            {
+                //pirPin.SetDriveMode(GpioPinDriveMode.InputPullUp);
+                pirPin.SetDriveMode(GpioPinDriveMode.Input);
+            }
             else
                 pirPin.SetDriveMode(GpioPinDriveMode.Input);
 
